@@ -1,7 +1,10 @@
 {
-    "name": "@sdb/common",
-    "private": true,
-    "devDependencies": {
-        "lerna": "3.11.1"
-    }
+	"name": "@sdb/common",
+	"private": true,
+	"scripts": {
+		"bootstrap": "lerna bootstrap --hoist"
+	},
+	"devDependencies": {
+		"lerna": "3.11.1"
+	}
 }

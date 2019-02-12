@@ -7,14 +7,14 @@ const std::string &ext = "sdb";
 
 class Connection {
   std::string fileName;
-  bool open;
+  bool connected;
   static int count;
 
   // constructor
  public:
-  Connection(std::string name) {
+  Connection(std::string name) : connected(true) {
     if (count > 10) {
-      throw std::range_error("Connection maximum of 10 exceeded");
+      std::cout << "Connection maximum of 10 exceeded";
     }
     fileName = name;
     Connection::count++;
@@ -32,6 +32,7 @@ class Connection {
   // get file contents
   const std::string getContents() const {
     std::string content;
+
     std::ifstream streamContents(getFilePath());
     content.assign((std::istreambuf_iterator<char>(streamContents)),
                    (std::istreambuf_iterator<char>()));

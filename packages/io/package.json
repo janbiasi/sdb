@@ -1,0 +1,11 @@
+{
+	"name": "@sdb/io",
+	"version": "0.1.0",
+	"scripts": {
+		"postinstall": "node-gyp configure",
+		"build": "node-gyp build"
+	},
+	"devDependencies": {
+		"node-gyp": "3.8.0"
+	}
+}
